@@ -1,12 +1,14 @@
 import { AuthConfig } from 'angular-oauth2-oidc';
 
 export const authConfig: AuthConfig = {
-  issuer: 'https://demo.identityserver.io',
-  clientId: 'interactive.public', // The "Auth Code + PKCE" client
+  issuer: 'https://localhost:44310', //this is for 
+  //issuer: 'https://cat-token-identity.azurewebsites.net',
+  clientId: 'employeeprofile', // The "Auth Code + PKCE" client
   responseType: 'code',
-  redirectUri: window.location.origin + '/index.html',
+  redirectUri: window.location.origin + '/auth-callback',
+  postLogoutRedirectUri: window.location.origin,
   silentRefreshRedirectUri: window.location.origin + '/silent-refresh.html',
-  scope: 'openid profile email api', // Ask offline_access to support refresh token refreshes
+  scope: 'openid profile email roles app.api.employeeprofile.read', // Ask offline_access to support refresh token refreshes
   useSilentRefresh: true, // Needed for Code Flow to suggest using iframe-based refreshes
   silentRefreshTimeout: 5000, // For faster testing
   timeoutFactor: 0.25, // For faster testing
