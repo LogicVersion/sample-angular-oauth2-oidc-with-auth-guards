@@ -7,5 +7,7 @@
     "**/.hg": true,
     "**/CVS": true,
     "**/.DS_Store": true
-  }
+  },
+  "appService.defaultWebAppToDeploy": "/subscriptions/7d4355af-9f71-4123-8a18-aa68dc430bbf/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/cat-angular-oidc",
+  "appService.deploySubpath": "dist\\sample-auth-guards"
 }

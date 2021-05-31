@@ -1,7 +1,8 @@
 import { AuthConfig } from 'angular-oauth2-oidc';
+import { environment } from 'src/environments/environment';
 
 export const authConfig: AuthConfig = {
-  issuer: 'https://localhost:44310', //this is for IdentityServer4 runningon localhost
+  issuer: environment.issuerURL, // 'https://localhost:44310', //this is for IdentityServer4 runningon localhost
   //issuer: 'https://cat-token-identity.azurewebsites.net',  //demo identityserver4 in Azure
   clientId: 'employeeprofile', // client id setup in IdentityServer4
   responseType: 'code', //code flow PKCE

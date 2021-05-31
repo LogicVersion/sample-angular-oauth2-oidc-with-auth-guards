@@ -16,6 +16,6 @@ export class HomeComponent implements OnInit {
   constructor(private apiService: ApiService) { }
 
   ngOnInit() {
-    this.apiResponse = this.apiService.getProtectedApiResponse();
+    //this.apiResponse = this.apiService.getProtectedApiResponse();
   }
 }
